@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import { ExclamationCircleIcon } from '@heroicons/react/24/solid';
 
 export default function Error({
     error,
@@ -16,6 +17,7 @@ export default function Error({
 
     return (
         <main className="flex h-full flex-col items-center justify-center">
+            <ExclamationCircleIcon className="w-10 text-red-400" />
             <h2 className="text-center font-bold">Something went wrong!</h2>
             <p className="text-xs">{error.message}</p>
             <button
