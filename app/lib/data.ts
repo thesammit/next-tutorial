@@ -15,6 +15,7 @@ export async function fetchRevenue() {
     // Don't do this in production :)
 
     console.log('Fetching revenue data...');
+    // slowing the api
     await new Promise((resolve) => setTimeout(resolve, 7000));
 
     const data = await sql<Revenue>`SELECT * FROM revenue`;
@@ -31,6 +32,7 @@ export async function fetchRevenue() {
 export async function fetchLatestInvoices() {
   try {
     console.log('Fetching latestInvoice data...');
+    // slowing the api
     await new Promise((resolve) => setTimeout(resolve, 4000));
 
     const data = await sql<LatestInvoiceRaw>`
